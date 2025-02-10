@@ -9,7 +9,7 @@ export default function DataTable() {
   const [selectedRows, setSelectedRows] = React.useState<GridRowSelectionModel>([]);
   const [paginationModel, setPaginationModel] = React.useState<GridPaginationModel>({
     page: 0,
-    pageSize: 5, // Default page size
+    pageSize: 5,
   });
 
   const handleRowSelection = (selection: GridRowSelectionModel) => {
@@ -41,7 +41,7 @@ export default function DataTable() {
         pagination
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
-        pageSizeOptions={[5, 10, 20]} // Now it will be visible
+        pageSizeOptions={[5, 10, 20]}
         onRowSelectionModelChange={handleRowSelection}
         rowSelectionModel={selectedRows}
         sx={{
